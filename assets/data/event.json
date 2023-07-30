@@ -1,0 +1,58 @@
+{
+    "items":[
+        {   
+            "id":1,
+            "theme":"default",
+            "backgroundUrl":"./assets/images/eventBg01.jpg",
+            "eventName":"샤오미",
+            "title":["스마트한 라이프","샤오미에서 시작"],
+            "subTitle":"#홈캠부터 제습기까지",
+            "linkUrl":"#event01"
+        },
+        {
+            "id":2,
+            "theme":"white",
+            "backgroundUrl":"./assets/images/eventBg02.jpg",
+            "eventName":"운동보조식품대전",
+            "title":["운동할 맛 나는","운동보조 식품 대전"],
+            "subTitle":"#프로틴 #에너지음료 #닭가슴살",
+            "linkUrl":"#event02"
+        },
+        {
+            "id":3,
+            "theme":"default",
+            "backgroundUrl":"./assets/images/eventBg03.jpg",
+            "eventName":"에스쁘아선런칭",
+            "title":["품절대란 세레나데","에스쁘아 올영 선런칭"],
+            "subTitle":"#해피크러쉬 #더슬릭",
+            "linkUrl":"#event03"
+        },
+        {   
+            "id":1,
+            "theme":"default",
+            "backgroundUrl":"./assets/images/eventBg01.jpg",
+            "eventName":"샤오미",
+            "title":["스마트한 라이프","샤오미에서 시작"],
+            "subTitle":"#홈캠부터 제습기까지",
+            "linkUrl":"#event01"
+        },
+        {
+            "id":2,
+            "theme":"white",
+            "backgroundUrl":"./assets/images/eventBg02.jpg",
+            "eventName":"운동보조식품대전",
+            "title":["운동할 맛 나는","운동보조 식품 대전"],
+            "subTitle":"#프로틴 #에너지음료 #닭가슴살",
+            "linkUrl":"#event02"
+        },
+        {
+            "id":3,
+            "theme":"default",
+            "backgroundUrl":"./assets/images/eventBg03.jpg",
+            "eventName":"에스쁘아선런칭",
+            "title":["품절대란 세레나데","에스쁘아 올영 선런칭"],
+            "subTitle":"#해피크러쉬 #더슬릭",
+            "linkUrl":"#event03"
+        }
+    ]
+}

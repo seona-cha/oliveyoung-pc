@@ -1,0 +1,18 @@
+{
+    "items":[
+        {
+            "theme":"white",
+            "thumbUrl":"./assets/images/weekly01.jpg",
+            "title":["누구나 쉽게","오브제 헤어"],
+            "desc":"#런칭 기념 최대 할인",
+            "linkUrl":"#weekly01"
+        },
+        {
+            "theme":"default",
+            "thumbUrl":"./assets/images/weekly02.jpg",
+            "title":["촉촉! 탱탱!","광채 피부 완성"],
+            "desc":"#슈퍼콜라겐 #7+1단독기획",
+            "linkUrl":"#weekly02"
+        }
+    ]
+}

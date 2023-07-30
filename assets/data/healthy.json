@@ -1,0 +1,18 @@
+{
+    "items":[
+        {
+            "thumbUrl":"./assets/images/healthy01.jpg",
+            "title":"레드립의 아티스트 아방",
+            "desc":["자유롭고 섹시하게 살아가려는","바람을 그림으로 풀어내요"],
+            "theme":"red",
+            "linkUrl":"#healthy01"
+        },
+        {
+            "thumbUrl":"./assets/images/healthy02.jpg",
+            "title":"뉴진스가 사랑한 작가 로렌정",
+            "desc":["하이틴 느낌 그 자체!","로렌정 작가의 작품 이야기"],
+            "theme":"skyblue", 
+            "linkUrl":"#healthy01"
+        }
+    ]
+}

@@ -1,0 +1,599 @@
+@import url(./font.css);
+@import url(./reset.css);
+/* 공통 부분 */
+.blind{position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip:rect(0,0,0,0);
+    margin: -1px;
+}
+.common-inner{
+    width: 1020px;
+    margin: 0 auto;
+}
+
+/* 본문 바로가기 버튼 */
+#skipNav a{
+    position: absolute;
+    width: 100%;
+    transform: translateY(-100%);
+    background: #9bce26;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    line-height: 30px;
+ }
+ #skipNav a:focus,
+ #skipNav a:active{
+    transform:translate(0);
+ }
+
+/************ HEADER *************/
+.header .common-inner{
+    display: flex;
+    position: relative;
+}
+
+.group-header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    margin-top: 30px;
+}
+.header .logo-area{
+    width: 248px;
+    height: 42px;
+    margin-top: -6px;
+    background: url(../images/h1_logo.png) no-repeat center / 100% auto;
+}
+.header .search-area{
+
+    width: 340px;
+    height: 40px;
+    border: 2px solid #9bce26;
+    border-radius: 20px;
+    padding: 0 20px;
+    margin-top: -6px;
+    margin-left: 90px;
+}
+.header .search-area fieldset{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 36px;
+}
+.header .search-area input{
+    flex: 1;
+    height: 28px;
+    border: none;
+    font-size: 12px;
+}
+.header .search-area input::placeholder{
+    font-size: 12px;
+    font-weight: 400;
+    color: #999;
+}
+.header .search-area .search-btn{
+    width: 21px;
+    height: 21px;
+    background: url(../images/ico_search.png) no-repeat center;
+}
+.header .sub-area{
+    display: flex;
+    gap: 30px;
+    margin-top: -3px;
+    margin-left: auto;
+    font-size: 14px;
+}
+.header .sub-area a {
+    display: flex;
+    position: relative;
+}
+.header .sub-area button{
+    display: flex;
+}
+.header .sub-area a::before{
+    position: absolute;
+    top: -2px;right: -15px;
+    display: block;
+    width: 1px;
+    height: 18px;
+    background: #ddd;
+    content:'';
+}
+.header .sub-area .today::after{
+    display: block;
+    width: 22px;
+    height: 20px;
+    margin-top: -3px;
+    margin-left: 5px;
+    background: url(../images/ico_delivery_flag.png) no-repeat center / 100% auto;
+    content:'';
+}
+.header .sub-area .arrow::after{
+    display: block;
+    width: 7px;
+    height: 4px;
+    margin-top: 5px;
+    margin-left: 5px;
+    background: url(../images/ico_arrow_small.png) no-repeat 0 top / 100% auto;
+    content:'';
+}
+
+.header .group-util{
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    top: 0; right: 0;
+    height: 30px;
+    font-size: 12px;
+    color: #333;
+    line-height: 30px;
+    letter-spacing: -.02em;
+}
+.header .group-util li {
+    position: relative;
+}
+.header .group-util li+li::before{
+    position: absolute;
+    top: 50%; left: -10px;
+    transform: translateY(-50%);
+    display: block;
+    width: 1px;
+    height: 10px;
+    background: #ddd;
+    content: '';
+}
+/************ GNB *************/
+.gnb{
+    height: 47px;
+    border-top: 1px solid #ddd;
+    border-bottom: 2px solid #555;
+}
+.gnb .common-inner {
+    position: relative;
+}
+.gnb #gnbToggle{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 170px;
+    height: 44px;
+    padding-left: 25px;
+    border: 1px solid #ddd;
+    border-width: 0 1px 0 1px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.gnb #gnbToggle::before{
+    display: block;
+    width: 22px;
+    height: 44px;
+    background: url(../images/ico_menu_btn.png) no-repeat center;
+    content:'';
+}
+
+.gnb #gnbToggle.on{
+    background: #2f3030;
+    border-color: #2f3030;
+    color: #fff;
+}
+.gnb #gnbToggle.on::before{
+    background-image: url(../images/ico_menu_btn_on.png) 
+}
+
+.gnb .nav-list{
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    margin-left: 50px;
+}
+.gnb .nav-item{
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 44px;
+    letter-spacing: -0.045em
+}
+.gnb .nav{
+    padding: 2px 0;
+}
+.gnb .nav:hover{
+    color: #f27370;
+    border-bottom:2px solid #f27370;
+}
+/************ 전체 카테고리 *************/
+.gnb .cate-all{
+    display: none;
+    position: absolute;
+    top: 100%; left: 0;
+    z-index: 10;
+}
+.gnb .cate-all.on{
+    display: block;
+}
+.gnb .cate-wrapper{
+    display: flex;
+    width: 1020px;
+    height: 810px;
+    background: #fff;
+    border: 2px solid #555;
+}
+.gnb .group-cate{
+    width: 254px;
+    padding: 20px 20px 22px;
+}
+.gnb .group-cate:nth-child(1){
+    width: 508px;
+}
+.gnb .group-cate+.group-cate{
+    border-left: 1px solid #ddd;
+}
+.gnb .group-cate h3{
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid #666;
+    padding: 0 22px 14px;
+    margin-bottom: 20px;
+}
+.gnb .cate-list{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    padding-left: 2px;
+}
+.gnb .list01 .cate-item:nth-child(4)::after{
+    display:block;
+    width: 100%;
+    height: 295px;
+    content: '';
+}
+.gnb .cate-item{
+    margin-bottom: 18px;
+    padding-left:19px;
+}
+.gnb .cate-item > a{
+    position: relative;
+    font-weight: bold;
+    padding-right: 15px;
+    background: url(../images/ico_menu_arrow.png) no-repeat center right / 5px 10px;
+}
+.gnb .cate-item > a::before{
+    display: block;
+    position: absolute;
+    bottom: -3px; left: 0;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width 0.3s;
+    content:'';
+}
+.gnb .cate-item > a:hover::before{
+    width: calc(100% - 2px);
+}
+.gnb #gnbClose{
+    position: absolute;
+    bottom: 5px; right: 5px;
+    width: 29px; height: 29px;
+    background: url(../images/close_gnb.gif);
+}
+/************ 소분류 *************/
+.gnb .sub-list{
+    margin-top: 12px;
+}
+.gnb .sub-item{
+    margin: 3px 0;
+}
+.gnb .sub-item > a{
+    position: relative;
+    font-size: 13px;
+    font-weight: 500;
+    color: #888;
+    line-height: 20px;
+    transition: color 0.3s;
+}
+.gnb .sub-item > a::before{
+    display: block;
+    position: absolute;
+    bottom: -3px; left: 0;
+    width: 0;
+    height: 1px;
+    background: #333;
+    transition: width 0.3s;
+    content:'';
+}
+.gnb .sub-item > a:hover{
+    color: #333;
+}
+.gnb .sub-item > a:hover::before{
+    width: calc(100% - 2px);
+}
+
+/************ footer *************/
+.footer{
+    border-top: 2px solid #aaa;
+}
+.footer .group-top{
+    background: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    padding: 11px 0;
+    font-size: 12px;
+}
+/* 푸터 상단 */
+.footer .group-top .common-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer .group-top .util-area{
+    display: flex;
+    gap: 40px;
+    letter-spacing: normal;
+}
+.footer .group-top .util-area li{
+    position: relative;
+}
+.footer .group-top .util-area li+li::before{
+    display: block;
+    position: absolute;
+    top: 0; left: -20px;
+    width: 1px;
+    height: 100%;
+    background: #ddd;
+    content:'';
+}
+.footer .related-area{
+    position: relative;
+}
+.footer #relatedSite{
+    position: relative;
+    width: 235px;
+    height: 30px;
+    background: url("../images/ico_footer_arrow.png") 95% center no-repeat #fff;
+    border: 1px solid #e5e5e5;
+    padding: 0 10px;
+    text-align: left;
+    color: #777;
+    line-height: 30px;
+}
+.footer .related-list{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    padding: 15px 10px 5px;
+    overflow-y: scroll;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-top-width: 0;
+}
+.footer .related-list .head{
+    display: block;
+    font-weight: bold;
+    color: #777;
+    margin-bottom: 10px;
+}
+.footer .related-list .sub{
+    margin-bottom: 20px;
+}
+.footer .related-list li:last-child .sub{
+    margin: 0;
+}
+.footer .related-list .sub li{
+    margin-bottom: 10px;
+    padding-left: 10px;
+    color: #777;
+}
+
+/* 푸터 중간 */
+.footer .md-1{
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+}
+.footer .md-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer .md-1 .logo-area{
+    width: 146px;
+    height: 24px;
+    background: url(../images/foot_logo.png) no-repeat center / 146px auto;
+}
+.footer .md-1 .right-area{
+    flex: 1;
+    margin: 25px 0 0 90px;
+}
+.footer .md-1 .right-area .inner{
+    display: flex;
+    gap: 70px;
+    justify-content: space-between;
+    margin-right: 35px;
+    letter-spacing: -0.02em;
+    word-break: keep-all;
+}
+.footer .md-1 h3{
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+.footer .md-1 p{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    color: #777;
+    line-height: 20px;
+}
+.footer .md-1 p .blank{
+    display: block;
+    width: 26px;
+    height: auto;
+}
+.footer .md-1 .link-more{
+    display: inline-block;
+    font-size: 12px;
+    margin-top: 12px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #000;
+}
+.footer i.bar{
+    display: block;
+    width: 1px;
+    height: 10px;
+    background: #ccc;
+}
+.footer .link-box li{
+    font-size: 12px;
+    color: #777;
+    line-height: 20px;
+}
+.footer .link-box li span{
+    padding: 0 5px;
+    font-weight: 600;
+}
+.footer .link-box strong{
+    font-weight: bold;
+    color: #000;
+    letter-spacing: -0.07em;
+}
+
+.footer .service-box{
+    flex: 1;
+}
+.footer .md-1 .responsibility{
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: -0.023em;
+    margin-top: 20px;
+}
+
+.footer .md-2{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-size: 11px;
+    color: #777;
+    letter-spacing: -0.02em;
+    line-height: 53px;
+}
+.footer .isms-area{
+    display: flex;
+    gap: 7px;
+    align-items: center;
+}
+.footer .ncsi-area{
+    display: flex;
+    gap: 7px;
+    align-items: center;
+}
+.footer .isms-area::before{
+    display: block;
+    width: 26px;
+    height: 26px;
+    content:'';
+    background: url(../images/foot_isms.png) no-repeat center / 26px auto;
+}
+.footer .ncsi-area::before{
+    display: block;
+    width: 26px;
+    height: 26px;
+    content:'';
+    background: url(../images/foot_ncsi.png) no-repeat center / 26px auto;
+
+}
+
+/* 푸터 하단 */
+.footer .group-bottom{
+    background: #f9f9f9;
+    border-top: 1px solid #e5e5e5;
+}
+
+.footer .group-bottom .common-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 0;
+}
+.footer .copy-area small{
+    font-size: 11px;
+    letter-spacing: normal;
+    font-weight: 600;
+    color: #888;
+}
+.footer .sns-area{
+    display: flex;
+    align-items: center;
+}
+.footer .sns-area h3{
+    font-size: 12px;
+    font-weight: 600;
+    color: #aaa;
+    margin-right: 13px;
+    margin-top: 3px;
+    letter-spacing: -0.013em;
+}
+.footer .sns-list{
+    display: flex;
+    gap: 16px;
+}
+.footer .sns-list li a{
+    display: block;
+    width: 22px;
+    height: 22px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+}
+
+.footer .facebook a{background: url(../images/ico_facebook.png)}
+.footer .instagram a{background: url(../images/ico_instagram.png)}
+.footer .youtube a{background: url(../images/ico_youtube.png)}
+.footer .kakaotalk a{background: url(../images/ico_kakaotalk.png)}
+
+/************ 맨위로 버튼 *************/
+#topBtn{
+    position: fixed;
+    bottom: 80px; right: 40px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+#topBtn.on{
+    visibility: visible;
+    opacity: 1;
+}
+#topBtn a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 55px;
+    height: 55px;
+    border: 1px solid #ddd;
+    background: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: normal;
+    color: #666;
+}
+#topBtn a::before{
+    display: block;
+    width: 14px;
+    height: 8px;
+    background: url(../images/ico_top_arrow.png) no-repeat bottom;
+    content:'';
+}
+
+#topBtn a:hover{
+    background: #555;
+    color: #fff;
+}
+#topBtn a:hover::before{
+    background-position: top;
+}

@@ -1,0 +1,46 @@
+{
+    "items":[
+        {
+            "theme":"default",
+            "thumbUrl":"./assets/images/slideBanner01.jpg",
+            "title":["토모토모PICK","수분진정 그린티"],
+            "desc":"#썬케어 #클렌징",
+            "linkUrl":"#slideBanner01"
+        },
+        {   
+            "theme":"default",
+            "thumbUrl":"./assets/images/slideBanner02.jpg",
+            "title":["컬러에 진심","16구팔레트"],
+            "desc":"#27%할인",
+            "linkUrl":"#slideBanner02"
+        },
+        {
+            "theme":"white",
+            "thumbUrl":"./assets/images/slideBanner03.jpg",
+            "title":["비건&프로틴","맛있는 간식!"],
+            "desc":"2+1, 최대 23%할인",
+            "linkUrl":"#slideBanner03"
+        },
+        {
+            "theme":"default",
+            "thumbUrl":"./assets/images/slideBanner04.jpg",
+            "title":["7월의 마지막","클렌징"],
+            "desc":"토너&크림 추천!",
+            "linkUrl":"#slideBanner04"
+        },
+        {
+            "theme":"default",
+            "thumbUrl":"./assets/images/slideBanner05.jpg",
+            "title":["HOT SUMMER","바캉스 메이크업"],
+            "desc":"#네일페디할인",
+            "linkUrl":"#slideBanner05"
+        },
+        {
+            "theme":"default",
+            "thumbUrl":"./assets/images/slideBanner06.jpg",
+            "title":["패치고민","케어플러스가답"],
+            "desc":"#온라인단독추가할인",
+            "linkUrl":"#slideBanner06"
+        }
+    ]
+}

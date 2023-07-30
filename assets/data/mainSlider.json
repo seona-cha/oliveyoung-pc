@@ -1,0 +1,139 @@
+{
+    "items":[
+        {
+            "theme":"default",
+            "thumbUrl":"./assets/images/mainSlider01.jpg",
+            "thumbAlt":"올리브 데이_정선일",
+            "subject":"올리브 멤버스",
+            "title":"단 3일간<br/>만나는<br/>올리브 데이",
+            "desc":"등급별 쿠폰 혜택을 만나보세요",
+            "linkUrl":"#mainSlider01"
+        },
+        {
+            "theme":"default",
+            "thumbUrl":"./assets/images/mainSlider02.jpg",
+            "thumbAlt":"LUXE EDIT(특가/쿠폰/이벤트)_김선영",
+            "subject":"LUXE EDIT",
+            "title":"매일<br/>업데이트되는<br/>럭스에디트 특가",
+            "desc":"오늘의 특가아이템 확인하기",
+            "linkUrl":"#mainSlider02"
+        },
+        {
+            "theme":"default",
+            "thumbUrl":"./assets/images/mainSlider03.jpg",
+            "thumbAlt":"이너뷰티 카캠(이벤트)_유태환",
+            "subject":"올리브영 이너뷰티",
+            "title":"속부터 채우는<br/>건강함을<br/>함께 나눠요",
+            "desc":"기프트카드 이벤트 응모하기",
+            "linkUrl":"#mainSlider03"
+        },
+        {
+            "theme":"white",
+            "thumbUrl":"./assets/images/mainSlider04.jpg",
+            "thumbAlt":"럭스에디트/위시리스트_이주은",
+            "subject":"LUXE EDIT",
+            "title":"여름에도<br/>무너지지 않는<br/>프리미엄 뷰티",
+            "desc":"7월의 뷰티 컬처:FIX&MIX",
+            "linkUrl":"#mainSlider04"
+        },
+        {
+            "theme":"default",
+            "thumbUrl":"./assets/images/mainSlider05.jpg",
+            "thumbAlt":"0704-0301_정유빈",
+            "subject":"아비브",
+            "title":"밀착력을 높여<br/>새로워진<br/>껌딱지 마스크팩",
+            "desc":"최대 52%할인",
+            "linkUrl":"#mainSlider05"
+        },
+        {
+            "theme":"default",
+            "thumbUrl":"./assets/images/mainSlider06.jpg",
+            "thumbAlt":"0704-0502_유선경",
+            "subject":"브랜드위크",
+            "title":"피지오겔이<br/>새롭게 선보이는<br/>수분 야심작",
+            "desc":"최대 47% 할인",
+            "linkUrl":"#mainSlider06"
+        },
+        {
+            "theme":"default",
+            "thumbUrl":"./assets/images/mainSlider07.jpg",
+            "thumbAlt":"0704-0401_최혜민",
+            "subject":"달바",
+            "title":"무더운 여름<br/>무너짐없이<br/>핑크빛 톤업",
+            "desc":"~60%, 호시 포토엽서 증정",
+            "linkUrl":"#mainSlider07"
+        },
+        {
+            "theme":"default",
+            "thumbUrl":"./assets/images/mainSlider08.jpg",
+            "thumbAlt":"0704-5002_박수영",
+            "subject":"쏘피",
+            "title":"뒤척임 심한<br/>여름밤에도<br/>안심해요",
+            "desc":"최대 58%할인",
+            "linkUrl":"#mainSlider08"
+        },
+        {
+            "theme":"default",
+            "thumbUrl":"./assets/images/mainSlider09.jpg",
+            "thumbAlt":"0704-5005_박수영",
+            "subject":"Y존케어",
+            "title":"상쾌한<br/>일상을 위해<br/>준비해요",
+            "desc":"최대 51%할인",
+            "linkUrl":"#mainSlider09"
+        },
+        {
+            "theme":"white",
+            "thumbUrl":"./assets/images/mainSlider10.jpg",
+            "thumbAlt":"0704-1003_권세희",
+            "subject":"파넬",
+            "title":"바르는<br/>3세대 <br/>기름종이 쿠션",
+            "desc":"한정 특가 및 럭키드로우",
+            "linkUrl":"#mainSlider10"
+        },
+        {
+            "theme":"default",
+            "thumbUrl":"./assets/images/mainSlider11.jpg",
+            "thumbAlt":"0704-3003_서지민",
+            "subject":"더마비",
+            "title":"바로 옷을<br/>입어도<br/>산뜻해요",
+            "desc":"1+1기획, 최대 43%할인",
+            "linkUrl":"#mainSlider11"
+        },
+        {
+            "theme":"white",
+            "thumbUrl":"./assets/images/mainSlider12.jpg",
+            "thumbAlt":"0704-4003_김태인",
+            "subject":"건강식품",
+            "title":"더위에<br/>빼앗긴 에너지<br/>신상으로 채워요",
+            "desc":"신상 건강식품 최대 31%할인",
+            "linkUrl":"#mainSlider12"
+        },
+        {
+            "theme":"default",
+            "thumbUrl":"./assets/images/mainSlider13.jpg",
+            "thumbAlt":"0704-0504_유선경",
+            "subject":"더말로지카",
+            "title":"쌀겨 가루에서<br/>찾은 여름철<br/>모공 관리",
+            "desc":"최대 30%할인",
+            "linkUrl":"#mainSlider13"
+        },
+        {
+            "theme":"default",
+            "thumbUrl":"./assets/images/mainSlider14.jpg",
+            "thumbAlt":"0704-2103_황하영",
+            "subject":"정샘물",
+            "title":"태양빛에<br/>더 빛나는<br/>밀착 커버",
+            "desc":"최대 20%할인",
+            "linkUrl":"#mainSlider14"
+        },
+        {
+            "theme":"default",
+            "thumbUrl":"./assets/images/mainSlider15.jpg",
+            "thumbAlt":"7/27 올영라이브_한준희",
+            "subject":"차앤박",
+            "title":"착한<br/>수분 진정<br/>앰플",
+            "desc":"라이브 최대 41% 할인",
+            "linkUrl":"#mainSlider15"
+        }
+    ]
+}

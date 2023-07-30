@@ -1,0 +1,17 @@
+*{margin:0;padding:0;font:inherit;color:inherit;}
+*, :after, :before {box-sizing:border-box;flex-shrink:0;}
+
+html, body {height:100%; line-height: 1;}
+img, picture, video, canvas, svg {display: block;max-width:100%;}
+button {background:none;border:0;cursor:pointer;}
+a {text-decoration:none}
+ul{list-style:none;}
+table {border-collapse:collapse;border-spacing:0}
+fieldset{border:none;}
+
+body{
+    font-family: 'Montserrat',-apple-system,'Noto Sans KR',sans-serif;
+    letter-spacing:-0.04em;
+    color:#000;
+    font-size: 14px;
+}

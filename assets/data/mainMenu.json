@@ -1,0 +1,231 @@
+{
+    "items":[
+        {   
+            "id":false,
+            "name":"기초화장품",
+            "sub":[
+                {
+                    "id":1,
+                    "name":"스킨케어",
+                    "mdpick":{
+                        "product":"prd01",
+                        "title":"에스트라💧",
+                        "subTitle":["+ 에센스, 선크림","증정기획!💕"],
+                        "thumbUrl":"./assets/images/product01.jpg",
+                        "cost":31000,
+                        "sale":23560,
+                        "linkUrl":"#product1"
+                        
+                    }
+                },
+                {
+                    "id":2,
+                    "name":"마스크팩",
+                    "mdpick":false
+                },
+                {
+                    "id":3,
+                    "name":"클렌징",
+                    "mdpick":{
+                        "product":"prd02",
+                        "title":"마녀공장🧹",
+                        "subTitle":["퓨어&딥 클렌징 폼","1+1 기획📢"],
+                        "thumbUrl":"./assets/images/product02.jpg",
+                        "cost":12000,
+                        "sale":15000,
+                        "linkUrl":"#product2"
+                    }
+                },
+                {
+                    "id":4,
+                    "name":"선케어",
+                    "mdpick":{
+                        "product":"prd16",
+                        "title":"빌리프🐻",
+                        "subTitle":["라인프렌즈에디션","스티커증정😍"],
+                        "thumbUrl":"./assets/images/product16.jpg",
+                        "cost":39000,
+                        "sale":31450,
+                        "linkUrl":"#product16"
+                    }
+                }
+            ]
+        },
+        {   
+            "id":5,
+            "name":"더모 코스메틱",
+            "sub":false,
+            "mdpick":{
+                "product":"prd05",
+                "title":"아벤느💙",
+                "subTitle":["강민경PICK","수분잡티세럼💦"],
+                "thumbUrl":"./assets/images/product05.jpg",
+                "cost":48000,
+                "sale":36000,
+                "linkUrl":"#product5"
+            }
+        },
+        {   
+            "id":false,
+            "name":"메이크업·네일",
+            "sub":[
+                {
+                    "id":6,
+                    "name":"메이크업",
+                    "mdpick":{
+                        "product":"prd13",
+                        "title":"에스쁘아🌺",
+                        "subTitle":["크림매트","단독선런칭🎀"],
+                        "thumbUrl":"./assets/images/product13.jpg",
+                        "cost":26000,
+                        "sale":20800,
+                        "linkUrl":"#product13"
+                    }
+                },
+                {
+                    "id":7,
+                    "name":"네일",
+                    "mdpick":false
+                }
+            ]
+        },
+        {   
+            "id":8,
+            "name":"바디케어",
+            "sub":false,
+            "mdpick":{
+                "product":"prd07",
+                "title":"버버리🦋",
+                "subTitle":["브리트쉬어","3종 택1❣️"],
+                "thumbUrl":"./assets/images/product07.jpg",
+                "cost":73000,
+                "sale":51100,
+                "linkUrl":"#product7"
+            }
+        },
+        {   
+            "id":9,
+            "name":"헤어케어",
+            "sub":false,
+            "mdpick":false
+        },
+        {   
+            "id":10,
+            "name":"향수/디퓨저",
+            "sub":false,
+            "mdpick":{
+                "product":"prd07",
+                "title":"버버리🦋",
+                "subTitle":["브리트쉬어","3종 택1❣️"],
+                "thumbUrl":"./assets/images/product07.jpg",
+                "cost":73000,
+                "sale":51100,
+                "linkUrl":"#product7"
+            }
+        },
+        {   
+            "id":11,
+            "name":"미용소품",
+            "sub":false,
+            "mdpick":{
+                "product":"prd08",
+                "title":"코링코💓",
+                "subTitle":["아찔한 속눈썹👀✨","블랙 or 브라운?"],
+                "thumbUrl":"./assets/images/product08.jpg",
+                "cost":20000,
+                "sale":13500,
+                "linkUrl":"#product8"
+            }
+        },
+        {   
+            "id":12,
+            "name":"남성",
+            "sub":false,
+            "mdpick":{
+                "product":"prd18",
+                "title":"질레트🪒",
+                "subTitle":["5중날 밀착면도","할인은 못참지😎"],
+                "thumbUrl":"./assets/images/product18.jpg",
+                "cost":95300,
+                "sale":57800,
+                "linkUrl":"#product18"
+            }
+        },
+        {   
+            "id":13,
+            "name":"구강/건강용품",
+            "sub":false,
+            "mdpick":{
+                "product":"prd12",
+                "title":"셀렉스💪",
+                "subTitle":["3가지 맛으로","더 맛있게🥤"],
+                "thumbUrl":"./assets/images/product12.jpg",
+                "cost":29900,
+                "sale":22900,
+                "linkUrl":"#product12"
+            }
+        },
+        {   
+            "id":14,
+            "name":"여성/위생용품",
+            "sub":false,
+            "mdpick":false
+        },
+        {   
+            "id":15,
+            "name":"건강식품",
+            "sub":false,
+            "mdpick":{
+                "product":"prd11",
+                "title":"헤이바디👙",
+                "subTitle":["간식의 유혹,","참을 수 없다면😵?"],
+                "thumbUrl":"./assets/images/product11.jpg",
+                "cost":false,
+                "sale":2500,
+                "linkUrl":"#product11"
+            }
+        },
+        {   
+            "id":16,
+            "name":"푸드",
+            "sub":false,
+            "mdpick":{
+                "product":"prd12",
+                "title":"셀렉스💪",
+                "subTitle":["3가지 맛으로","더 맛있게🥤"],
+                "thumbUrl":"./assets/images/product12.jpg",
+                "cost":29900,
+                "sale":22900,
+                "linkUrl":"#product12"
+            }
+        },
+        {   
+            "id":17,
+            "name":"라이프/홈",
+            "sub":false,
+            "mdpick":{
+                "product":"prd10",
+                "title":"",
+                "subTitle":["우리집 필수템","기분까지 상쾌하게🍃"],
+                "thumbUrl":"./assets/images/product10.jpg",
+                "cost":24800,
+                "sale":21900,
+                "linkUrl":"#product10"
+            }
+        },
+        {   
+            "id":18,
+            "name":"반려동물",
+            "sub":false,
+            "mdpick":{
+                "product":"prd17",
+                "title":"바잇미🐱",
+                "subTitle":["옆집 비숑도 탐내는","우리냥이 건강식품🐾"],
+                "thumbUrl":"./assets/images/product17.jpg",
+                "cost":false,
+                "sale":2900,
+                "linkUrl":"#product17"
+            }
+        }
+    ]
+}

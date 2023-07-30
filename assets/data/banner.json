@@ -1,0 +1,14 @@
+{
+    "items":[
+        {
+            "thumbUrl":"./assets/images/banner01.jpg",
+            "title":"팔로우하면 20% 쿠폰 GET",
+            "linkUrl":"#banner01"
+        },
+        {
+            "thumbUrl":"./assets/images/banner02.jpg",
+            "title":"올리브 멤버스 하반기 혜택",
+            "linkUrl":"#banner03"
+        }
+    ]
+}

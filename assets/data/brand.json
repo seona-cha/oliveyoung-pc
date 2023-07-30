@@ -1,0 +1,32 @@
+{
+    "items":[
+        {
+            "brandId":1,
+            "name":"빌리프",
+            "backgroundUrl":"./assets/images/brand01.jpg",
+            "likes":1318,
+            "linkUrl":"#brand01"
+        },
+        {
+            "brandId":2,
+            "name":"아벤느",
+            "backgroundUrl":"./assets/images/brand02.jpeg",
+            "likes":7232 ,
+            "linkUrl":"#brand02"
+        },
+        {
+            "brandId":3,
+            "name":"빌리프",
+            "backgroundUrl":"./assets/images/brand01.jpg",
+            "likes":1318,
+            "linkUrl":"#brand01"
+        },
+        {
+            "brandId":4,
+            "name":"아벤느",
+            "backgroundUrl":"./assets/images/brand02.jpeg",
+            "likes":7232 ,
+            "linkUrl":"#brand02"
+        }
+    ]
+}

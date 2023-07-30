@@ -1,0 +1,40 @@
+{
+    "items":[
+        {
+            "thumbUrl":"./assets/images/keyword01.jpg",
+            "title":"하루 2,500번 검색, 지속력",
+            "subTitle":"여름에도 아침 메이크업 그대로",
+            "linkUrl":"#keyword01"
+        },
+        {
+            "thumbUrl":"./assets/images/keyword02.jpg",
+            "title":"주 만 번 검색, 다이어트",
+            "subTitle":"저칼로리 식단으로 관리 시작해요",
+            "linkUrl":"#keyword02"
+        },
+        {
+            "thumbUrl":"./assets/images/keyword03.jpg",
+            "title":"주 2만 번 검색, 쿨링",
+            "subTitle":"달아오른 열감 2℃ 내리기",
+            "linkUrl":"#keyword03"
+        },
+        {
+            "thumbUrl":"./assets/images/keyword04.jpg",
+            "title":"검색량 40%증가, 여름쿠션",
+            "subTitle":"언제 어디서나 탄탄한 베이스",
+            "linkUrl":"#keyword04"
+        },
+        {
+            "thumbUrl":"./assets/images/keyword05.jpg",
+            "title":"주 15,000번 검색, 팔꿈치",
+            "subTitle":"묵은 각질 잠재워요",
+            "linkUrl":"#keyword05"
+        },
+        {
+            "thumbUrl":"./assets/images/keyword06.jpg",
+            "title":"주 4,500번 검색, 눈가주름",
+            "subTitle":"더 깊어지기 전 관리 시작해요",
+            "linkUrl":"#keyword06"
+        }
+    ]
+}
