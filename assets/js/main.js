@@ -9,7 +9,7 @@ $('#gnbClose').click(function(){
 })
 
 // 전체 카테고리 불러오기
-fetch('../assets/data/category.json')
+fetch('./assets/data/category.json')
     .then(res=>res.json())
     .then(json=>{
 
@@ -56,7 +56,7 @@ fetch('../assets/data/category.json')
     })
 
 // 메인 슬라이더
-fetch('../assets/data/mainSlider.json')
+fetch('./assets/data/mainSlider.json')
     .then(res=>res.json())
     .then(json=>{
         data=json.items;
@@ -114,7 +114,7 @@ mainSlider_pause.click(function(){
 })
 
 // 슬라이더 좌측 카테고리
-fetch('../assets/data/mainMenu.json')
+fetch('./assets/data/mainMenu.json')
     .then(res=>res.json())
     .then(json =>{
         data=json.items;
