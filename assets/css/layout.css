@@ -1,6 +1,9 @@
 @import url(./font.css);
 @import url(./reset.css);
 /* 공통 부분 */
+.wrapper{
+    min-width:1180px;
+}
 .blind{position: absolute;
     width: 1px;
     height: 1px;
@@ -558,6 +561,7 @@
 /************ 맨위로 버튼 *************/
 #topBtn{
     position: fixed;
+    z-index: 1;
     bottom: 80px; right: 40px;
     visibility: hidden;
     opacity: 0;

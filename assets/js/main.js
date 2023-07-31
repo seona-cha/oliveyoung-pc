@@ -267,7 +267,7 @@ function similar(i,j){
                 }
     
                 html+=`
-                            <a href="#" class="cart"><span class="blind">장바구니</span></a>
+                            <a href="#cart" class="cart"><span class="blind">장바구니</span></a>
                         </div>
                     </div>
                 </li>
@@ -362,7 +362,7 @@ function recomm(i,j){
                 }
     
                 html+=`
-                            <a href="#" class="cart"><span class="blind">장바구니</span></a>
+                            <a href="#cart" class="cart"><span class="blind">장바구니</span></a>
                         </div>
                     </div>
                 </li>
@@ -974,20 +974,13 @@ fetch('./assets/data/product.json')
         }
         $('.ranking-prd a').removeClass('active');
         $(`.sc-ranking .rank${rankFocus}`).addClass('active');
+        clearInterval(interval);
+        interval = setInterval(rankAuto, 3000);
     })
-
-    // 아이템 클릭시 
-    $('.sc-ranking .rank-item').click(function(a){
-        a.preventDefault();
-        rankFocus = Number($(this).attr('href').charAt(1)*10) + Number($(this).attr('href').charAt(2))
-        i = rankFocus ;
-        
-        $('.ranking-prd a').removeClass('active');
-        $(`.sc-ranking .rank${rankFocus}`).addClass('active');
-    })
+    
 
     // 3초에 한번씩 자동으로 넘어감
-    setInterval(function(){
+    function rankAuto(){
         rankFocus++;
         if(rankFocus == 11){
             rankFocus = 1;
@@ -1002,7 +995,24 @@ fetch('./assets/data/product.json')
             $('.ranking-prd a').removeClass('active');
             $(`.sc-ranking .rank${rankFocus}`).addClass('active');
         }
-    },3000)
+    }
+
+    interval = setInterval(rankAuto, 3000);
+
+    // 아이템 클릭시 
+
+    $('.sc-ranking .rank-item').click(function(a){
+        a.preventDefault();
+        rankFocus = Number($(this).attr('href').charAt(1)*10) + Number($(this).attr('href').charAt(2))
+        i = rankFocus ;
+
+        
+        $('.ranking-prd a').removeClass('active');
+        $(`.sc-ranking .rank${rankFocus}`).addClass('active');
+        clearInterval(interval);
+        interval = setInterval(rankAuto, 3000);
+    
+    })
 })
 
 // 계열사 바로가기
