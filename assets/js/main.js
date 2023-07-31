@@ -79,39 +79,40 @@ fetch('./assets/data/mainSlider.json')
             `
             $(`.sc-main-slider .swiper-wrapper`).html(html)
         });
+        
+        const mainSlider = new Swiper(".sc-main-slider .swiper",{
+            loop:true,
+            effect:"fade",
+            autoplay:{
+                delay:4000,
+                disableOnInteraction: false        
+            },
+            navigation:{
+                nextEl:".sc-main-slider .next",
+                prevEl:".sc-main-slider .prev"
+            },
+            pagination:{
+                el:".sc-main-slider .pagination",
+                type: "fraction"
+            }
+        })
+    
+        // 재생, 정지 버튼
+        const mainSlider_start = $(`.sc-main-slider .play`);
+        const mainSlider_pause = $(`.sc-main-slider .pause`);
+        
+        mainSlider_start.click(function(){
+            mainSlider.autoplay.start();
+            $(this).css("display","none");
+            $(mainSlider_pause).css("display","block");
+        });
+        mainSlider_pause.click(function(){
+            mainSlider.autoplay.stop();
+            $(this).css("display","none");
+            $(mainSlider_start).css("display","block");
+        })
     })
 
-const mainSlider = new Swiper(".sc-main-slider .swiper",{
-    effect:"fade",
-    loop:true,
-    autoplay:{
-        delay:4000,
-        disableOnInteraction: false        
-    },
-    navigation:{
-        nextEl:".sc-main-slider .next",
-        prevEl:".sc-main-slider .prev"
-    },
-    pagination:{
-        el:".sc-main-slider .pagination",
-        type: "fraction"
-    }
-})
-
-// 재생, 정지 버튼
-const mainSlider_start = $(`.sc-main-slider .play`);
-const mainSlider_pause = $(`.sc-main-slider .pause`);
-
-mainSlider_start.click(function(){
-    mainSlider.autoplay.start();
-    $(this).css("display","none");
-    $(mainSlider_pause).css("display","block");
-});
-mainSlider_pause.click(function(){
-    mainSlider.autoplay.stop();
-    $(this).css("display","none");
-    $(mainSlider_start).css("display","block");
-})
 
 // 슬라이더 좌측 카테고리
 fetch('./assets/data/mainMenu.json')
@@ -527,26 +528,27 @@ fetch('./assets/data/event.json')
     `
     
     $('.sc-event .swiper-wrapper').html(html);
+    // 이벤트 슬라이더
+    const eventSlider = new Swiper(".sc-event .swiper",{
+        loop:true,
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween:20,
+        navigation:{
+            nextEl:".sc-event .next",
+            prevEl:".sc-event .prev"
+        },
+        pagination:{
+            el:".sc-event .pagination",
+            clickable : true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + "</span>";
+            }
+        }
+    })
 })
 
-// 이벤트 슬라이더
-const eventSlider = new Swiper(".sc-event .swiper",{
-    loop:true,
-    slidesPerView: 2,
-    slidesPerGroup: 2,
-    spaceBetween:20,
-    navigation:{
-        nextEl:".sc-event .next",
-        prevEl:".sc-event .prev"
-    },
-    pagination:{
-        el:".sc-event .pagination",
-        clickable : true,
-        renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (index + 1) + "</span>";
-          }
-    }
-})
+
 // 키워드
 
 current3 = 1;
@@ -616,21 +618,22 @@ fetch('./assets/data/slideBanner.json')
             `
         })
         $('.sc-only .swiper-wrapper').html(html);
+        // 오직 올리브영에서만 슬라이더
+        const bannerSlider = new Swiper(".sc-only .swiper",{
+            loop:true,
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            spaceBetween:10,
+            pagination:{
+                el:".sc-only .pagination",
+                clickable : true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' + (index + 1) + "</span>";
+                }
+            }
+        })
     })
-// 오직 올리브영에서만 슬라이더
-const bannerSlider = new Swiper(".sc-only .swiper",{
-    loop:true,
-    slidesPerView: 3,
-    slidesPerGroup: 3,
-    spaceBetween:10,
-    pagination:{
-        el:".sc-only .pagination",
-        clickable : true,
-        renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (index + 1) + "</span>";
-          }
-    }
-})
+
 
 
 // 이 상품 어때요? 상품 리스트 불러오기
@@ -640,7 +643,7 @@ fetch(`./assets/data/product.json`)
         data = json.items;
         
         html=``;
-        for(i=0;i<13;i++){
+        for(i=0;i<12;i++){
             element = data[i];
 
             html+=`
@@ -697,26 +700,27 @@ fetch(`./assets/data/product.json`)
         }
         
         $(`.sc-product .prd-list`).html(html)
+        // 이 상품 어때요? 슬라이더
+        const prdSlider = new Swiper(".sc-product .swiper",{
+            loop:true,
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+            spaceBetween:30,
+            navigation:{
+                nextEl:".sc-product .next",
+                prevEl:".sc-product .prev"
+            },
+            pagination:{
+                el:".sc-product .pagination",
+                clickable : true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' + (index + 1) + "</span>";
+                }
+            }
+        })
     })
     
-// 이 상품 어때요? 슬라이더
-const prdSlider = new Swiper(".sc-product .swiper",{
-    loop:true,
-    slidesPerView: 4,
-    slidesPerGroup: 4,
-    spaceBetween:30,
-    navigation:{
-        nextEl:".sc-product .next",
-        prevEl:".sc-product .prev"
-    },
-    pagination:{
-        el:".sc-product .pagination",
-        clickable : true,
-        renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (index + 1) + "</span>";
-          }
-    }
-})
+
 
 // Healthy Life
 fetch('./assets/data/healthy.json')
@@ -752,7 +756,7 @@ fetch('./assets/data/brand.json')
 
         data.forEach(element=>{
             html+=`
-            <li class="tab-item">
+            <li class="tab-item swiper-slide">
                 <a href="${element.linkUrl}" data-tab="#tab0${element.brandId}">${element.name}</a>
             </li>
             `
@@ -786,7 +790,7 @@ fetch('./assets/data/brand.json')
             </div>
             `
         })
-        $(`.sc-brand .swiper-wrapper`).html(html)
+        $(`.sc-brand .brand .swiper-wrapper`).html(html)
         
         // 브랜드별 상품 리스트 불러오기
         fetch('./assets/data/product.json')
@@ -852,13 +856,154 @@ fetch('./assets/data/brand.json')
             sortData(3,"빌리프");
             sortData(4,"아벤느");
         })
-
+        // 브랜드 슬라이더
+        const brandTab = new Swiper(".sc-brand .swiper-tab",{
+            slidesPerView:"auto"
+        })
+        const brandSlider = new Swiper(".sc-brand .swiper",{
+            loop:true,
+            spaceBetween:30,
+            navigation:{
+                nextEl:".sc-brand .next",
+                prevEl:".sc-brand .prev"
+            },
+            thumbs: {
+                swiper: brandTab,
+            }
+        })
     })
 
 
 
 // 랭킹
+fetch('./assets/data/product.json')
+.then(res=>res.json())
+.then(json=>{
+    data = json.items;
 
+    function rank(i,j,location){
+        html=``;
+
+        while(i < j){
+            element = data[i];
+            rankCurr = Number(element.id.charAt(3)*10) + Number(element.id.charAt(4))
+            html+=`
+                    <li class="ranking-prd">
+                        <a class="rank-item rank${rankCurr}" href="#${element.id.charAt(3)}${element.id.charAt(4)}">
+                            <em class="rank">${rankCurr}</em>
+                            <span class="title">${element.productName}</span>
+                        </a>
+                        <div class="prd-item">
+                            <a href="${element.linkUrl}"></a>
+                            <figure class="img-box">
+                                <img src="${element.thumbUrl}" alt>
+                            </figure>
+                            <div class="text-box">
+                                <em class="view"><span>${element.view}</span>명이 보고있어요</em>
+                                <p class="brand-name">${element.brand}</p>
+                                <strong class="prd-name">${element.productName}</strong>
+                                <p class="price">
+                                `
+                                if(element.cost){
+                                    html+=`<del class="cost">${element.cost.toLocaleString()}<span>원</span></del>`
+                                }   
+                                html+=`
+                                    <em class="sale">${element.sale.toLocaleString()}<span>원</span></em>
+                                </p>
+                                `
+                                if(element.tag){
+                                    html+=`<p class="tag">`;
+                    
+                                    prdTag = element.tag;
+                                    prdTag.forEach(element=>{
+                                        if(element == '세일'){
+                                            html+=`<span class="sale">${element}</span>`
+                                        }
+                                        if(element == '쿠폰'){
+                                            html+=`<span class="coupon">${element}</span>`
+                                        }
+                                        if(element == '증정'){
+                                            html+=`<span class="gift">${element}</span>`
+                                        }
+                                        if(element == '오늘드림'){
+                                            html+=`<span class="today">${element}</span>`
+                                        }
+                                    })
+                                    
+                                    html+=`</p>`;
+                                }
+                                html+=`
+                            </div>
+                        </div>
+                    </li>
+                    `
+                i++;
+        }
+        
+        $(location).html(html)
+        
+    }
+    rank(0,5,`.sc-ranking .swiper-slide:first-child .prd-list`);   
+    rank(5,10,`.sc-ranking .swiper-slide:last-child .prd-list`);   
+
+    
+    const rankSlider = new Swiper(".sc-ranking .swiper",{
+        effect:"fade",
+        pagination:{
+            el:".sc-ranking .pagination",
+            clickable : true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + "</span>";
+            }
+        }
+    })
+    
+    let rankFocus = 1;
+    $('.sc-ranking .rank1').addClass('active');
+    
+    // 페이징 클릭시 
+    $('.sc-ranking .swiper-pagination-bullet').click(function(a){
+        a.preventDefault();
+        i = $(this).index();
+    
+        rankSlider.slideTo(i);
+        if(i == 0){
+            rankFocus = 1;
+        }else{
+            rankFocus = 6;
+        }
+        $('.ranking-prd a').removeClass('active');
+        $(`.sc-ranking .rank${rankFocus}`).addClass('active');
+    })
+
+    // 아이템 클릭시 
+    $('.sc-ranking .rank-item').click(function(a){
+        a.preventDefault();
+        rankFocus = Number($(this).attr('href').charAt(1)*10) + Number($(this).attr('href').charAt(2))
+        i = rankFocus ;
+        
+        $('.ranking-prd a').removeClass('active');
+        $(`.sc-ranking .rank${rankFocus}`).addClass('active');
+    })
+
+    // 3초에 한번씩 자동으로 넘어감
+    setInterval(function(){
+        rankFocus++;
+        if(rankFocus == 11){
+            rankFocus = 1;
+        }
+        // rankCurr 값이 바뀌면
+        if(rankFocus < 6){  
+            rankSlider.slideTo(0);
+            $('.ranking-prd a').removeClass('active');
+            $(`.sc-ranking .rank${rankFocus}`).addClass('active');
+        }else if(rankFocus < 11){  
+            rankSlider.slideTo(1);
+            $('.ranking-prd a').removeClass('active');
+            $(`.sc-ranking .rank${rankFocus}`).addClass('active');
+        }
+    },3000)
+})
 
 // 계열사 바로가기
 $('#relatedSite').click(function(){

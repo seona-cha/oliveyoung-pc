@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>올리브영 온라인몰</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.1.4/swiper-bundle.css">
     <link rel="stylesheet" href="./assets/css/layout.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     
   
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.1.4/swiper-bundle.min.js"></script>
     <script src="./assets/js/main.js" defer></script>
 </head>
 <body>
@@ -444,12 +444,14 @@
                 <!-- 주목해야 할 브랜드 -->
                 <section class="sc-brand">
                     <h2 class="headline">주목해야 할 브랜드</h2>
-                    <ul class="tab-list">
-                        <!-- <li class="tab-item">
-                            <a href="" data-tab=""></a>
-                        </li> -->
-                    </ul>
-                    <div class="swiper">
+                    <div class="swiper-tab">
+                        <ul class="swiper-wrapper tab-list">
+                            <!-- <li class="tab-item">
+                                <a href="" data-tab=""></a>
+                            </li> -->
+                        </ul>
+                    </div>
+                    <div class="swiper brand">
                         <div class="swiper-wrapper">
                             <!-- <div class="swiper-slide">
                                 <div class="brand-area">
@@ -490,15 +492,46 @@
                 <!-- 실시간 View 랭킹 -->
                 <section class="sc-ranking">
                     <h2 class="headline">실시간 View 랭킹</h2>
-                    <div class="swiper">
+                    <div class="swiper swiper-no-swiping">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <ul class="show-area">
-
+                                <ul class="prd-list prd-list02">
+                                <!-- 
+                                    <li class="ranking-prd">
+                                        <a class="rank-item" href="">
+                                            <em class="rank"></em>
+                                            <span class="title"></span>
+                                        </a>
+                                        <div class="prd-item">
+                                            <a href=""></a>
+                                            <figure class="img-box">
+                                                <img src="" alt="">
+                                            </figure>
+                                            <div class="text-box">
+                                                <em class="view"><span></span>명이 보고있어요</em>
+                                                <p class="brand-name"></p>
+                                                <strong class="prd-name"></strong>
+                                                <p class="price">
+                                                    <del class="cost">원</del>
+                                                    <em class="sale">원</em>
+                                                </p>
+                                                <p class="tag">
+                                                    <span class="sale">세일</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li> 
+                                -->
+                                </ul>
+                            </div>
+                            <div class="swiper-slide">
+                                <ul class="prd-list prd-list02">
+                                    
                                 </ul>
                             </div>
                         </div>
                     </div>
+                    <div class="pagination"></div>
                 </section>
 
                 <div class="inner3">
