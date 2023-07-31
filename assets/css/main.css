@@ -920,6 +920,23 @@
 .sc-ranking .prd-item .text-box .view span{
     font-weight: 600;
 }
+.sc-ranking .prd-item .brand-name{
+    margin-bottom: 4px;
+}
+.sc-ranking .prd-item .prd-name{
+    -webkit-line-clamp: 3;
+    height: auto;
+    max-height:64px;
+    margin-bottom: 8px;
+}
+.sc-ranking .prd-item .price{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.sc-ranking .prd-item .price .cost{
+    font-size: 11px;
+}
 .sc-ranking .pagination{
     position: absolute;
     top: 0;
