@@ -998,7 +998,7 @@
     padding: 10px 0 18px;
     border-bottom: 1px solid #ddd;
 }
-.sc-notice .notice-list{
+.sc-notice p{
     color: #666;
 }
 .sc-notice .link-more{

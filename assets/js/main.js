@@ -1,11 +1,21 @@
 // 전체 카테고리 토글
+let toggle=1;
 $('#gnbToggle').click(function(){
     $(this).toggleClass('on');
+    if(toggle==1){
+        $(this).attr('aria-checked', true);
+        toggle=2;
+    }else if(toggle==2){
+        $(this).attr('aria-checked', false);
+        toggle=1;
+    }
     $('.cate-all').toggle();
 })
 $('#gnbClose').click(function(){
     $('#gnbToggle').removeClass('on');
     $('.cate-all').hide();
+    $('#gnbToggle').attr('aria-checked', false);
+    toggle=1;
 })
 
 // 전체 카테고리 불러오기
@@ -15,22 +25,21 @@ fetch('./assets/data/category.json')
 
         data=json.items; // 전체 데이터
 
-        // 3단으로 분리
-        list01 = data.filter(function(parm){
-            return parm.id <= 12;
-        })
-        list02 = data.filter(function(parm){
-            return 13 <= parm.id && parm.id <= 16;
-        })
-        list03 = data.filter(function(parm){
-            return parm.id >= 17;
-        })
-
         // 카테고리 출력 폼
-        function cateAll(listNum, className){
-            let html=``;
+        let html=``;
+        function cateAll(sortId){
 
-            listNum.forEach(element => {
+            cateList = data.filter(function(parm){
+                return parm.sort == sortId;
+            })
+
+            html+=`
+            <div class="group-cate">
+                <h3>${sortId}</h3>
+                <ul class="cate-list">
+                                `
+
+            cateList.forEach(element => {
 
                 html+=`<li class="cate-item">
                             <a href="#${element.id}">${element.name}</a>
@@ -43,16 +52,20 @@ fetch('./assets/data/category.json')
                 })
 
                 html+=`</ul>
-                    </li>`
+                    </li>
+                `
 
             });
-            
-            $(className).html(html);
+            html+=`
+                </ul>
+            </div>
+            `
+            $(".gnb .cate-wrapper").html(html);
         }
         // 카테고리 불러오기
-        cateAll(list01,".gnb .list01");
-        cateAll(list02,".gnb .list02");
-        cateAll(list03,".gnb .list03");
+        cateAll("뷰티");
+        cateAll("헬스&푸드");
+        cateAll("라이프");
     })
 
 // 메인 슬라이더
@@ -233,7 +246,7 @@ function similar(i,j){
                     <img src="${element.thumbUrl}" alt>
                 </figure>
                 <div class="text-box">
-                    <strong class="prd-name">${element.productName}</strong>
+                    <p class="prd-name">${element.productName}</p>
                     <div class="info-wrap">
                         <p class="price">`
                         if(element.cost){
@@ -267,7 +280,7 @@ function similar(i,j){
                 }
     
                 html+=`
-                            <a href="#cart" class="cart"><span class="blind">장바구니</span></a>
+                            <button href="#cart" class="cart"><span class="blind">장바구니</span></button>
                         </div>
                     </div>
                 </li>
@@ -328,7 +341,7 @@ function recomm(i,j){
                     <img src="${element.thumbUrl}" alt>
                 </figure>
                 <div class="text-box">
-                    <strong class="prd-name">${element.productName}</strong>
+                    <p class="prd-name">${element.productName}</p>
                     <div class="info-wrap">
                         <p class="price">`
                         if(element.cost){
@@ -362,7 +375,7 @@ function recomm(i,j){
                 }
     
                 html+=`
-                            <a href="#cart" class="cart"><span class="blind">장바구니</span></a>
+                            <button href="#cart" class="cart"><span class="blind">장바구니</span></button>
                         </div>
                     </div>
                 </li>
@@ -479,7 +492,7 @@ fetch('./assets/data/event.json')
                         </figure>
                         <div class="text-box">
                             <em class="brand-name">${element.brand}</em>
-                            <strong class="prd-name">${element.productName}</strong>
+                            <p class="prd-name">${element.productName}</p>
                             <div class="info-wrap">
                                 <p class="price">
                                 `
@@ -660,7 +673,7 @@ fetch(`./assets/data/product.json`)
                         </figure>
                         <div class="text-box">
                             <em class="brand-name">${element.brand}</em>
-                            <strong class="prd-name">${element.productName}</strong>
+                            <p class="prd-name">${element.productName}</p>
                             <div class="info-wrap">
                                 <p class="price">
                                 `
@@ -813,7 +826,7 @@ fetch('./assets/data/brand.json')
                             <img src="${element.thumbUrl}" alt>
                         </figure>
                         <div class="text-box">
-                            <strong class="prd-name">${element.productName}</strong>
+                            <p class="prd-name">${element.productName}</p>
                             <p class="price">
                             `
                             if(element.cost){
@@ -901,7 +914,7 @@ fetch('./assets/data/product.json')
                             <div class="text-box">
                                 <em class="view"><span>${element.view}</span>명이 보고있어요</em>
                                 <p class="brand-name">${element.brand}</p>
-                                <strong class="prd-name">${element.productName}</strong>
+                                <p class="prd-name">${element.productName}</p>
                                 <p class="price">
                                 `
                                 if(element.cost){

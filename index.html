@@ -59,7 +59,7 @@
             <!-- gnb 영역 -->
             <nav class="gnb">
                 <div class="common-inner">
-                    <button id="gnbToggle" type="button">카테고리</button>
+                    <button id="gnbToggle" type="button" aria-checked="false">카테고리</button>
                     <ul class="nav-list">
                         <li class="nav-item"><a href="#" class="nav">오특</a></li>
                         <li class="nav-item"><a href="#" class="nav">신상</a></li>
@@ -72,7 +72,7 @@
                         <li class="nav-item"><a href="#" class="nav">이벤트</a></li>
                     </ul>
                     <!-- 전체 카테고리 보기 -->
-                    <div class="cate-all">
+                    <aside class="cate-all">
                         <h2 class="blind">전체 카테고리 보기</h2>
                         <div class="cate-wrapper">
                             <div class="group-cate">
@@ -116,7 +116,7 @@
                             </div>
                         </div>
                         <button id="gnbClose"><span class="blind">전체 카테고리 닫기</span></button>
-                    </div>
+                    </aside>
                 </div>
             </nav>
         </header>
@@ -126,7 +126,7 @@
             <div class="inner1">
                 <!-- 메인 슬라이더 -->
                 <section class="sc-main-slider">
-                    <h2 class="blind">메인슬라이더</h2>
+                    <h2 class="blind">주요 이벤트 슬라이드</h2>
                     <div class="swiper">
                         <div class="swiper-wrapper">
                         <!-- 
@@ -528,7 +528,7 @@
                                 <ul class="prd-list prd-list02">
                                     
                                 </ul>
-                            </div>
+                            </div> 
                         </div>
                     </div>
                     <div class="controls-wrapper">
@@ -542,9 +542,7 @@
                         <!-- 공지사항 -->
                         <section class="sc-notice">
                             <h2 class="headline">공지사항</h2>
-                            <ul class="notice-list">
-                                <li>새로운 소식이 없어요</li>
-                            </ul>
+                            <p>새로운 소식이 없어요</p>
                             <a href="#" class="link-more">더보기</a>
                         </section>
                         <!-- 고객센터 -->
@@ -581,6 +579,7 @@
         </main>
 
         <footer class="footer">
+            <h2 class="blind">올리브영 푸터</h2>
             <!-- 푸터 상단 영역 -->
             <div class="group-top">
                 <div class="common-inner">
@@ -646,15 +645,15 @@
                 <div class="common-inner">
                     <div class="md-1">
                         <div class="logo-area">
-                            <h2 class="logo">
+                            <div class="logo">
                                 <span class="blind">올리브영 푸터 로고</span>
-                            </h2>
+                            </div>
                         </div>
                         <div class="right-area">
                             <div class="inner">
                                 <!-- 올리브영 정보 -->
                                 <address class="addr-box">
-                                    <h3>씨제이올리브영 주식회사</h3>
+                                    <strong>씨제이올리브영 주식회사</strong>
                                     <p>대표이사 : 이선정 <i class="bar"></i> 사업자등록번호 : 809-81-01574</p>
                                     <p>주소 : (04323) 서울특별시 용산구 한강대로 372, 24층</p>
                                     <p><span class="blank"></span>(동자동, KDB타워)</p>
@@ -673,7 +672,7 @@
                                 </ul>
                                 <!-- 구매안전 서비스 안내 -->
                                 <div class="service-box">
-                                    <h3>하나은행 구매안전 서비스</h3>
+                                    <strong>하나은행 구매안전 서비스</strong>
                                     <p>올리브영은 현금 결제한 금액에 대해 하나은행과 채무지급보증 계약을체결 하여 안전한 거래를 보장하고 있습니다</p>
                                     <a class="link-more" href="#">서비스 가입사실 확인></a>
                                 </div>
